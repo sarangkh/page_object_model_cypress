@@ -14,6 +14,14 @@ npm install
 
 npm run  test
 
+Note:-
+
+"delete:reports": "del /f /s /q cypress\\reports 1>nul" this command might not run for Mac. I have developed this on windows and couldent tests it for Mac.
+If this fails please modify "test" attribute in packae.json as below and execute and run again using npm run test:-
+
+    "test": "npm run scripts || npm run posttest",
+
+
 this will execute both the tests in headless mode and generated HTML report at the end of the execution.
 
 Please refer to support/index.js for method to attach screenshots report and  scripts in package.json
