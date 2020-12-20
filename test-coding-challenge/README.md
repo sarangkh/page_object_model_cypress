@@ -10,9 +10,9 @@ This solution has the framework to test Stan portal.
 
 To run the tests use command
 
-npm install 
+'npm install' 
 
-npm run  test
+'npm run  test'
 
 Note:-
 
