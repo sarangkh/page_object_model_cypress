@@ -1,0 +1,15 @@
+{
+    "baseUrl": "https://www.stan.com.au/watch/",
+    "video": false,
+    "pageLoadTimeout": 80000,
+    "defaultCommandTimeout": 10000,
+    "responseTimeout" : 60000,
+    "viewportWidth": 1280,
+    "viewportHeight": 720,
+    "chromeWebSecurity": false,
+    "reporter": "cypress-multi-reporters",
+    "screenshotsFolder": "cypress/reports/assets",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+      }
+}

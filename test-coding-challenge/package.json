@@ -1,0 +1,38 @@
+{
+  "name": "test-coding-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run pretest && npm run scripts || npm run posttest",
+    "scripts": "cypress run",
+    "cy:open": "cypress open",
+    "pretest": "npm run delete:reports || npm run make:directories",
+    "delete:reports": "del /f /s /q cypress\\reports 1>nul",
+    "combine-reports": "mochawesome-merge cypress/reports/json/*.json > cypress/reports/mochawesome-report.json",
+    "generate-report": "marge cypress/reports/mochawesome-report.json -f report -o cypress/reports --autoOpen",
+    "posttest": "npm run combine-reports && npm run generate-report"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rm": "^0.1.8"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
+    "cypress": "^6.1.0",
+    "cypress-file-upload": "^4.0.4",
+    "cypress-iframe": "^1.0.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "cypress-wait-until": "^1.7.1",
+    "eslint": "^7.2.0",
+    "mkdirp": "^1.0.4",
+    "mocha": "^7.1.2",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.0.3",
+    "mochawesome-report-generator": "^5.1.0",
+    "rimraf": "^3.0.2"
+  }
+}

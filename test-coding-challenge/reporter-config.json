@@ -1,0 +1,18 @@
+{
+    "reporterEnabled": "mochawesome,spec, mocha-junit-reporter",
+    "mochawesomeReporterOptions": {
+        "reportDir": "cypress/reports/json",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss"
+    },
+    "mochaJunitReporterReporterOptions": {
+        "properties": {
+            "BUILD_ID": 4291
+        },
+        "mochaFile": "cypress/reports/xml/report-[hash].xml"
+       
+    }
+}
