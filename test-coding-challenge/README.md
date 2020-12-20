@@ -22,5 +22,4 @@ Please note:- Validate video playback test might fail because of login captcha
  
 This challenge is expected to take around 2-3 hours.
  
-## Details
 
